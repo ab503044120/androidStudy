@@ -5,7 +5,6 @@ import android.os.Handler;
 import android.os.Looper;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.ViewGroup;
 
 import butterknife.ButterKnife;
 
@@ -40,8 +39,8 @@ public abstract class BaseActivity extends AppCompatActivity implements UIConven
 
     private void initBaseView() {
 //        setContentView(R.layout.common_super_layout);
-        contentView = View.inflate(this, getLayoutResId(), null);
-        contentView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+//        contentView = View.inflate(this, getLayoutResId(), null);
+//        contentView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
 //        ((RelativeLayout) findViewById(R.id.rly_root)).addView(contentView);
 //        mLoadingDialog = new LoadingDialog(this);
 //        mLoadingDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
@@ -50,6 +49,7 @@ public abstract class BaseActivity extends AppCompatActivity implements UIConven
 //                onLoadingCancel();
 //            }
 //        });
+        setContentView(getLayoutResId());
     }
 
 

@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import butterknife.ButterKnife;
+import cn.bmob.v3.Bmob;
 
 /**
  * Created by YangZhenshan on 2016/5/5.
@@ -31,6 +32,7 @@ public abstract class BaseActivity extends AppCompatActivity implements UIConven
         UiThreadId = Thread.currentThread().getId();
         initBaseView();
         ButterKnife.bind(this);
+        Bmob.initialize(this, "8ad1ef052449ddc4ed1e816201b4932b");
         initVariable();
         initView();
         initData();
